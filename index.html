@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles.css">
-    <title>APIs</title>
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Corregí la ruta del archivo CSS -->
+    <title>Buscar Usuario GitHub</title>
 </head>
-<body>
-    <p class="name"></p>
-    <p class="blog"></p>
 
-  <script src="../assets/js/app.js"></script>
+<body>
+
+
+    <div class="wrapper"> <!-- Este es el wrapper que está referido en el css en "helper divs"-->
+        <h1>Insertar usuario de GitHub</h1>
+        <form id="github-user-form">
+            <fieldset>
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username" required> <!-- añadì campo para meter usuario -->
+                <button type="submit">Buscar</button> <!-- Aquí queda el botón de css, hice uno nuevo -->
+            </fieldset>
+        </form>
+
+
+        <!-- hace falta un contenedor para meter los datos -->
+        <div class="result">
+            <h2>Información del Usuario</h2>
+            <p class="name">Nombre: <span id="name">N/A</span></p>
+            <!-- la info de NA la obtendrá de los datos de app.js -->
+            <p class="blog">Blog: <span id="blog">N/A</span></p>
+            <p class="location">Ubicación: <span id="location">N/A</span></p>
+            <!-- falta definir "location" en la tabla -->
+        </div>
+    </div>
+    <!-- No me salió ponerlo en tabla como según parece indicar el css, me rindo jaja -->
+
+    <script src="../assets/js/app.js"></script>
 </body>
-</html>
+
+</html> 

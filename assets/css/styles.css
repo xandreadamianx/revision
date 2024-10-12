@@ -1,6 +1,218 @@
-/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+button,
+hr,
+input {
+  overflow: visible
+}
+
+progress,
+sub,
+sup {
+  vertical-align: baseline
+}
+
+/* No entiendo el propósito de este checkbox más que para aceptar algún término, así que lo agregaré */
+
+[type=checkbox],
+[type=radio],
+legend {
+  box-sizing: border-box;
+  padding: 0
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  margin: 0
+}
+
+details,
+main {
+  display: block
+}
+
+h1 {  /* No se aprecia bien el h1, añadí detalles de formato */
+  color: aliceblue;
+  font-size: 2em;
+  margin: .67em 0
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+a {
+  background-color: transparent
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted
+}
+
+b,
+strong {
+  font-weight: bolder
+}
+
+small {
+  font-size: 80%
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative
+}
+
+sub {
+  bottom: -.25em
+}
+
+sup {
+  top: -.5em
+}
+
+img {
+  border-style: none
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0
+}
+
+button,
+select {
+  text-transform: none
+}
 
 
+/* parece que esto de webkit-appearance no es recomendable, pues no es muy compatible,
+Voy a cambiarlo todo por un botón nuevo y sencillo */
+/* [type=button],
+[type=reset],
+[type=submit],
+button {
+  -webkit-appearance: button  
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0
+} */
+.button {  /* Nuevo botón */
+  background-color: #b9009a;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* [type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+  outline: ButtonText dotted 1px
+}
+
+fieldset {
+  padding: .35em .75em .625em
+}
+
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal
+}
+
+textarea {
+  overflow: auto
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit
+} 
+
+*************    Y DURO Y DALE CON SU WEBKIT *******************/
+/* Aquí mi propuesta
+*/
+fieldset {
+  padding: 0.35em 0.75em 0.625em; 
+  border: 1px solid #ccc; 
+}
+/* hover */
+
+button:hover {
+  background-color: #0056b3; 
+}
+
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em; 
+  overflow: auto; 
+  border-color: #b9009a;
+}
+
+
+legend {
+  color: inherit; 
+  display: block; /* que se muestre como bloque */
+  max-width: 100%; 
+  white-space: normal;
+}
+
+textarea {
+  overflow: auto;  /* responsivo */
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  padding: 0.5em; 
+}
+
+
+
+summary {
+  display: list-item
+}
+
+/* Honestamente no entiendo qué es esto de abajo! */
 
 /* Variables */
 html {
@@ -12,14 +224,16 @@ html {
   --black: #2e2e2e;
   --red: #c73737;
   --green: #61e846;
-  --text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
-  --box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+  --text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  --box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
   font-size: 62.5%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -31,7 +245,7 @@ body {
   background-size: 15px;
 }
 
-
+/* Entiendo que debe haber una tabla pero no sé para qué, supongo que para meter los datos del usuario, arreglaré un poco el estilo */
 /* Table Styles */
 
 table {
@@ -39,9 +253,11 @@ table {
   overflow: hidden;
   margin-bottom: 2rem;
   border-collapse: collapse;
+  color: blueviolet;
 }
 
-td, th {
+td,
+th {
   border: 1px solid var(--grey);
   padding: 0.5rem;
 }
@@ -56,16 +272,20 @@ td, th {
   background: white;
 }
 
-.box, .wrapper {
-  box-shadow: 0 0 3px 5px rgba(0,0,0,0.08653);
+.box,   /* ??????? box? */
+.wrapper {
+  box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.08653);
 }
+
 a {
   color: var(--blue);
   text-decoration-color: var(--yellow);
 }
 
 
-a.button, button, input[type="button"] {
+a.button,
+button,
+input[type="button"] {
   color: white;
   background: var(--pink);
   padding: 1rem;
@@ -73,7 +293,7 @@ a.button, button, input[type="button"] {
   border: 2px solid transparent;
   text-decoration: none;
   font-weight: 600;
-  font-size:2rem;
+  font-size: 2rem;
 }
 
 :focus {
@@ -84,7 +304,9 @@ fieldset {
   border: 1px solid black;
 }
 
-input:not([type="checkbox"]):not([type="radio"]), textarea, select {
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
   display: block;
   padding: 1rem;
   border: 1px solid var(--grey);
@@ -105,6 +327,7 @@ h6 {
   line-height: 1;
   text-shadow: var(--text-shadow);
 }
+
 .wrapper h1,
 .wrapper h2,
 .wrapper h3,
@@ -114,3 +337,5 @@ h6 {
   color: var(--black);
   text-shadow: none;
 }
+
+/* comentario final:  brUH :L   */
